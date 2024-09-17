@@ -1,5 +1,5 @@
 import { Route, Routes, Navigate } from 'react-router-dom';
-import Main from './components/Dashboard';
+import Dashboard from './components/Dashboard';
 import Signup from './components/Signup';
 import Login from './components/Login';
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <Routes>
-      {user && <Route path="/" exact element={<Main />} />}
+      {user && <Route path="/" exact element={<Dashboard />} />}
       <Route path="/signup" exact element={<Signup />} />
       <Route path="/login" exact element={<Login />} />
       <Route path="/" element={<Navigate replace to="/login" />} />
